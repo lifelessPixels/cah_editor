@@ -1,0 +1,42 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "run-s clean lint",
+    "build": "parcel build public/index.html --no-source-maps",
+    "clean": "rimraf ./dist",
+    "start": "parcel public/index.html --open",
+    "lint": "run-s lint:code lint:scss",
+    "lint:code": "eslint --ext ts,tsx src/",
+    "lint:scss": "stylelint \"**/*.scss\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.13.3",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.18.2",
+    "@typescript-eslint/parser": "^8.18.2",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react": "^7.37.3",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.13.3",
+    "process": "^0.11.10",
+    "rimraf": "^6.0.1",
+    "stylelint": "^16.12.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "stylelint-scss": "^6.10.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "antd": "^5.22.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

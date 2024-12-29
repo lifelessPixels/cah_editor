@@ -1,0 +1,9 @@
+@use 'base';
+
+html,
+body,
+div#root {
+  @include use-full-space;
+  margin: 0;
+  padding: 0;
+}
